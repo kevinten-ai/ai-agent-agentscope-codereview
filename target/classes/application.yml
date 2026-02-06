@@ -1,0 +1,103 @@
+spring:
+  application:
+    name: ai-agent-agentscope-codereview
+
+  profiles:
+    active: development
+
+logging:
+  level:
+    com.brag.codereview: DEBUG
+    io.agentscope: INFO
+    reactor.netty: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+agentscope:
+  model:
+    provider: dashscope
+    api-key: ${DASHSCOPE_API_KEY:}
+    model-name: qwen-plus
+    stream: true
+    enable-thinking: true
+    temperature: 0.7
+    max-tokens: 4000
+    thinking-budget: 2048
+
+  agent:
+    max-iters: 10
+    memory-type: in-memory
+    memory-max-length: 200
+
+  tools:
+    groups:
+      - name: code_analysis
+        description: 代码结构和质量分析
+        active: true
+      - name: security_scan
+        description: 安全漏洞扫描
+        active: true
+      - name: performance_analysis
+        description: 性能问题分析
+        active: true
+      - name: code_style_check
+        description: 代码风格检查
+        active: true
+      - name: documentation_check
+        description: 文档完整性检查
+        active: true
+      - name: test_coverage
+        description: 测试覆盖率分析
+        active: true
+
+  codereview:
+    # 代码审查配置
+    max-file-size: 1048576  # 1MB
+    supported-extensions:
+      - java
+      - py
+      - js
+      - ts
+      - go
+      - cpp
+      - c
+    enable-security-scan: true
+    enable-performance-analysis: true
+    enable-quality-check: true
+
+server:
+  port: 8081
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: when-authorized
+
+---
+spring:
+  config:
+    activate:
+      on-profile: development
+
+logging:
+  level:
+    com.brag.codereview: DEBUG
+
+---
+spring:
+  config:
+    activate:
+      on-profile: production
+
+logging:
+  level:
+    com.brag.codereview: INFO
+
+agentscope:
+  model:
+    temperature: 0.3  # 生产环境降低随机性
+    enable-thinking: true

@@ -1,0 +1,12 @@
+D:\project\brag\ai_agent\ai-agent-agentscope-codereview\src\main\java\com\brag\codereview\AiCodeReviewApplication.java
+D:\project\brag\ai_agent\ai-agent-agentscope-codereview\src\main\java\com\brag\codereview\config\AgentScopeConfig.java
+D:\project\brag\ai_agent\ai-agent-agentscope-codereview\src\main\java\com\brag\codereview\config\CodeReviewConfig.java
+D:\project\brag\ai_agent\ai-agent-agentscope-codereview\src\main\java\com\brag\codereview\config\ToolConfig.java
+D:\project\brag\ai_agent\ai-agent-agentscope-codereview\src\main\java\com\brag\codereview\examples\CodeReviewExample.java
+D:\project\brag\ai_agent\ai-agent-agentscope-codereview\src\main\java\com\brag\codereview\service\CodeReviewAgentService.java
+D:\project\brag\ai_agent\ai-agent-agentscope-codereview\src\main\java\com\brag\codereview\tool\CodeAnalysisTool.java
+D:\project\brag\ai_agent\ai-agent-agentscope-codereview\src\main\java\com\brag\codereview\tool\CodeStyleCheckTool.java
+D:\project\brag\ai_agent\ai-agent-agentscope-codereview\src\main\java\com\brag\codereview\tool\DocumentationCheckTool.java
+D:\project\brag\ai_agent\ai-agent-agentscope-codereview\src\main\java\com\brag\codereview\tool\PerformanceAnalysisTool.java
+D:\project\brag\ai_agent\ai-agent-agentscope-codereview\src\main\java\com\brag\codereview\tool\SecurityScanTool.java
+D:\project\brag\ai_agent\ai-agent-agentscope-codereview\src\main\java\com\brag\codereview\tool\TestCoverageTool.java

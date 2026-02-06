@@ -1,0 +1,12 @@
+com\brag\codereview\config\CodeReviewConfig.class
+com\brag\codereview\examples\CodeReviewExample.class
+com\brag\codereview\AiCodeReviewApplication.class
+com\brag\codereview\tool\CodeStyleCheckTool.class
+com\brag\codereview\tool\CodeAnalysisTool.class
+com\brag\codereview\tool\DocumentationCheckTool.class
+com\brag\codereview\service\CodeReviewAgentService.class
+com\brag\codereview\tool\PerformanceAnalysisTool.class
+com\brag\codereview\tool\SecurityScanTool.class
+com\brag\codereview\tool\TestCoverageTool.class
+com\brag\codereview\config\AgentScopeConfig.class
+com\brag\codereview\config\ToolConfig.class
